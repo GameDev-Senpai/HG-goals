@@ -14,18 +14,21 @@ if (!$conn) {
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="styling.css">
 	<title>Final Fantasy XIV Tool</title>
 </head>
 <body>
-	<h1 class="header-title">FFXIV Tool</h1>
-	<p class="header-caption">Quick and easy way to see what needs doing</p>
+  <div class="header">
+	  <h1 class="header-title">Harold's Goals</h1>
+	  <p class="header-caption">Quick and easy way to see what needs doing</p>
+  </div>
 
 	<table class="main-body">
 		<tr class="main-header">
-      <th id="title-column">Title</th>
-			<th id="description-column">Description</th>
-			<th id="category-column">Category</th>
-			<th id="deadline-column">Deadline</th>
+      <th id="title">Title</th>
+			<th id="description">Description</th>
+			<th id="category">Category</th>
+			<th id="deadline">Deadline</th>
 		</tr>
     <?php
       $query = "SELECT title, description, category, date FROM goals";
@@ -37,11 +40,22 @@ if (!$conn) {
         echo "<tr><td>" . $row["title"] . "</td>";
         echo "<td>" . $row["description"] . "</td>";
         echo "<td>" . $row["category"] . "</td>";
-        echo "<td>" . $row["date"] . "</td>";
-        echo "</tr>";
+        echo "<td>" . $row["date"] . "</td></tr>";
       }
     ?>
 	</table>
+
+  <footer>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+
+    <div class="social-media">
+      <img src="instagram.svg" style="width:40px;height:40px;">
+    </div>
+  </footer>
 
 </body>
 </html>
