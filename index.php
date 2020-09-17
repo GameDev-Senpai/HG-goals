@@ -46,14 +46,20 @@ if (!$conn) {
 	</table>
 
   <footer>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Privacy</a></li>
-    </ul>
+    <div class="other-links">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
 
-    <div class="social-media">
-      <img src="instagram.svg" style="width:40px;height:40px;">
+    <div class="social-media-container">
+      <div class="social-media-images">
+        <a href="#"><img src="instagram.svg" style="width:40px;height:40px;"></a>
+        <a href="#"><img src="facebook.svg" style="width:40px;height:40px;"></a>
+        <a href="#"><img src="twitter.svg" style="width:40px;height:40px;"></a>
+      </div>
     </div>
   </footer>
 

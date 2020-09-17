@@ -1,21 +1,26 @@
 body {
 	box-sizing: border-box;
 	font-family: sans-serif;
+	margin: 0;
 }
 
 .header {
 	background-color: CadetBlue;
-	text-align: center;
-	padding: 0.5%;
-	margin: 1%;
  }
 
  .header-title {
  	color: MidnightBlue;
+ 	margin: 0;
+ 	padding-top: 10px;
+ 	padding-left: 10px;
  }
 
  .header-caption {
  	color: MidnightBlue;
+ 	padding-bottom: 10px;
+ 	padding-left: 10px;
+ 	margin-top: 0;
+ 	margin-bottom: 2em;
  }
 
  .main-body {
@@ -39,13 +44,42 @@ body {
 
  ul {
  	list-style-type: none;
+ 	float: right;
  }
 
  li {
  	color: white;
+ 	display: inline;
+ 	margin-right: 30px;
  }
 
  a {
  	color: black;
  	text-decoration: none;
+ }
+
+a:hover {
+	text-decoration: underline;
+}
+
+ .other-links {
+ 	display: inline-block;
+ 	border-right: 1px solid white;
+ 	width: 50%;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ }
+
+ .social-media-container {
+ 	display: inline-block;
+ 	width: 49%;
+ 	margin-bottom: 10px;
+ }
+
+ .social-media-images {
+ 	float: left;
+ }
+
+ .social-media-images img {
+ 	margin-left: 30px;
  }
