@@ -1,21 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "Harold-DBA";
-$password = "OppaiDaisuki7!";
-$dbname = "final_fantasy";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-  # code...
-  die("Connection failed: " . mysqli_connect_error());
-}
+  include '../connection.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="styling.css">
-	<title>Final Fantasy XIV Tool</title>
+	<title>HG: Home</title>
 </head>
 <body>
   <div class="header">
@@ -28,10 +18,11 @@ if (!$conn) {
       <th id="title">Title</th>
 			<th id="description">Description</th>
 			<th id="category">Category</th>
-			<th id="deadline">Deadline</th>
+			<th id="priority">Priority</th>
 		</tr>
     <?php
-      $query = "SELECT title, description, category, date FROM goals";
+      $query = "SELECT title, description, category, priority FROM goals
+       ORDER BY priority DESC";
 
       $result = mysqli_query($conn, $query);
 
@@ -40,7 +31,7 @@ if (!$conn) {
         echo "<tr><td>" . $row["title"] . "</td>";
         echo "<td>" . $row["description"] . "</td>";
         echo "<td>" . $row["category"] . "</td>";
-        echo "<td>" . $row["date"] . "</td></tr>";
+        echo "<td>" . $row["priority"] . "</td></tr>";
       }
     ?>
 	</table>
